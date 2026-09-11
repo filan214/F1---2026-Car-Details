@@ -1,0 +1,13 @@
+{
+  "name": "apex-formula-explorer",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node scripts/serve.mjs",
+    "check": "node --check dist/app.js && node --check dist/car.js && node --check dist/imported-car.js && node --check dist/load-car.js && node scripts/validate.mjs && node --test tests/*.test.mjs"
+  },
+  "dependencies": {
+    "three": "0.180.0"
+  }
+}

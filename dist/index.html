@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#101113" />
+  <meta name="description" content="Explore Qvist's 2026 Formula One concept in 16 selectable groups with an interactive 3D exploded view." />
+  <title>APEX — Qvist 2026, Disassembled</title>
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="./styles.css" />
+  <script type="importmap">{"imports":{"three":"./vendor/three.module.js","three/addons/":"./vendor/addons/"}}</script>
+</head>
+<body>
+  <header class="header">
+    <a class="brand" href="./" aria-label="APEX home"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span>APEX<span class="brand-divider"></span><span class="brand-caption">THE ENGINEERING EDIT</span></a>
+    <div class="header-right"><span class="edition">EXPLORATION SERIES <span>—</span> 001</span><button class="about-button" id="about-button" aria-label="About this model" title="About this model"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7v1"/></svg></button></div>
+  </header>
+
+  <main class="workspace">
+    <section class="explorer" aria-label="Interactive 3D car explorer">
+      <div class="intro"><div class="eyebrow"><span class="red-dash"></span>FORMULA ONE. DISASSEMBLED.</div><h1>Precision in<br>every piece<span>.</span></h1><p>One machine. A thousand decisions.<br>Discover what makes it extraordinary.</p></div>
+      <div class="model-meta"><span class="live-dot"></span> LIVE 3D MODEL<span class="meta-line">QVIST 2026 / F1 CONCEPT</span></div>
+      <div class="watermark" aria-hidden="true">QVIST 2026</div>
+      <div class="scene" id="scene"><div class="loading" id="loading"><span class="loader"></span>Preparing the machine</div></div>
+      <div class="scene-error" id="scene-error" hidden><h2>3D needs a little more power.</h2><p>Enable hardware acceleration in your browser and reload to explore the car. You can still browse the components.</p><button id="retry">Reload explorer</button></div>
+      <div class="view-tools" role="group" aria-label="Camera views"><button class="view-button active" data-view="perspective" aria-pressed="true" title="Perspective view"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="m12 3 8 4.5v9L12 21l-8-4.5v-9L12 3Z M4 7.5l8 4.5 8-4.5M12 12v9"/></svg><span>3D view</span></button><button class="view-button" data-view="side" aria-pressed="false">Side</button><button class="view-button" data-view="top" aria-pressed="false">Top</button><span class="tool-separator"></span><button class="icon-button" id="reset-view" title="Reset view" aria-label="Reset camera view"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 10a8 8 0 1 1 1 7M4 4v6h6"/></svg></button></div>
+      <div class="viewport-tools"><button class="icon-button" id="auto-rotate" aria-label="Auto rotate" aria-pressed="false" title="Auto rotate"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 6c-2-2-10-2-12 0-3 3 0 6 6 6s9 3 6 6c-2 2-10 2-12 0M15 3l3 3-3 3M9 15l-3 3 3 3"/></svg></button><button class="icon-button" id="grid-toggle" aria-label="Show ground grid" aria-pressed="true" title="Toggle ground grid"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="m12 3 10 9-10 9L2 12l10-9Zm-5 4.5 10 9M17 7.5l-10 9"/></svg></button></div>
+      <div class="scene-hint"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="6" y="2" width="12" height="20" rx="6"/><path d="M12 2v7"/></svg><span>Drag to orbit <b>·</b> Scroll to zoom <b>·</b> Click a part to explore</span></div>
+      <div class="assembly-control">
+        <div class="assembly-heading"><div><span class="control-kicker">LOOK BENEATH THE SURFACE</span><h2>Take it apart.</h2></div><button class="explode-button" id="explode-button"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="m12 2 9 5-9 5-9-5 9-5Zm-9 10 9 5 9-5M3 17l9 5 9-5"/></svg><span id="explode-label">Explode view</span><span class="button-arrow">↗</span></button></div>
+        <div class="slider-line"><span class="slider-end">Assembled</span><div class="range-wrap"><input id="explosion" aria-label="Disassembly amount" type="range" min="0" max="100" value="0" step="1" /><div class="range-ticks" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></div><span class="slider-end">Exploded</span><output id="explosion-value" for="explosion">0<span>%</span></output></div>
+      </div>
+    </section>
+
+    <aside class="components-panel" aria-label="Car components">
+      <div class="panel-heading"><span class="eyebrow">THE BUILD</span><span class="panel-count">16 ASSEMBLIES</span><h2>Explore the machine</h2><p>Select a component to get closer.</p></div>
+      <div class="component-list" id="component-list"></div>
+      <div class="component-detail" id="component-detail" aria-live="polite"><div class="detail-top"><span class="detail-category" id="detail-category">AERODYNAMICS</span><span id="detail-number">01 / 16</span></div><h3 id="detail-title">Front wing</h3><p id="detail-description">The layered front wing and endplates meet the airflow first. Explore the curved elements and their connection beneath the nose.</p><div class="detail-material"><span>DISPLAY FINISH</span><strong id="detail-material">Graphite study finish</strong></div></div>
+      <div class="panel-bottom"><span class="mini-cross">+</span><span>Greatness is in the details.</span></div>
+    </aside>
+  </main>
+
+  <footer class="footer"><span>BUILT TO BE UNDERSTOOD.</span><div><span>16 assemblies</span><i></i><span>360° exploration</span><i></i><span>Infinite curiosity</span></div><span class="footer-right">AN INDEPENDENT ENGINEERING STUDY <span>↗</span></span></footer>
+  <dialog id="about-dialog">
+    <button class="dialog-close" id="close-about" aria-label="Close about">×</button>
+    <div class="eyebrow">THE ENGINEERING EDIT / 001</div>
+    <h2>A machine,<br>made understandable.</h2>
+    <p id="model-description">Qvist_designs' independent 2026 concept is presented in 16 illustrative groups. The shape comes from the source model, with display cuts in the joined bodywork. It is not Ferrari SF-26 CAD or a complete internal assembly model.</p>
+    <p class="model-credit" id="model-credit" hidden></p>
+    <p>Drag to orbit, scroll or pinch to zoom, and move the disassembly slider to look inside. Select components on the car or in the list to learn about them. The slider also works with your keyboard’s arrow keys.</p>
+    <a href="https://corp.formula1.com/this-is-formula-1/" target="_blank" rel="noopener noreferrer">Discover Formula One ↗</a>
+    <small>Independent educational concept. Not affiliated with Formula 1 or any racing team.</small>
+  </dialog>
+  <noscript><div class="noscript">Please enable JavaScript to use the interactive 3D explorer.</div></noscript>
+  <script type="module" src="./app.js"></script>
+</body>
+</html>

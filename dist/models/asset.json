@@ -1,0 +1,49 @@
+{
+  "asset": "./models/qvist-2026-assemblies.glb",
+  "name": "Qvist 2026",
+  "subtitle": "F1 CONCEPT",
+  "description": "Explore Qvist_designs' independent 2026 Formula One concept in 16 groups. The source shape is preserved, with red and graphite finishes. Display seams divide its joined bodywork for an illustrative exploded view; they are not manufacturing joints. This model is not Ferrari SF-26 CAD and does not contain a complete internal power unit.",
+  "license": {
+    "acquired": true,
+    "title": "F1 2026 concept (polygon model)",
+    "creator": "Qvist_designs",
+    "label": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "source": "https://sketchfab.com/3d-models/f1-2026-concept-polygon-model-ea3bde709b1e4dc9b0ec8557d106ed42",
+    "usage": "Modification and redistribution with attribution, license link and identification of changes.",
+    "changes": "Adapted for APEX: display scale, 16 illustrative component groups, clean cuts in fused bodywork, and red/graphite finishes. Original surface retained; uniform vertex colors removed."
+  },
+  "acquisition": {
+    "target": "Qvist_designs' F1 2026 concept",
+    "status": "integrated",
+    "candidate": "https://sketchfab.com/3d-models/f1-2026-concept-polygon-model-ea3bde709b1e4dc9b0ec8557d106ed42",
+    "candidateName": "F1 2026 concept by Qvist_designs",
+    "match": "Generic 2026 concept, not Ferrari SF-26",
+    "listedPriceUSD": 0,
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+    "requiresCreatorContact": false,
+    "assetDownloaded": true,
+    "signInConfirmed": true,
+    "expectedGlbBytes": 40461936,
+    "receivedGlbBytes": 40461936
+  },
+  "components": [
+    {"id":"front-wing","name":"Front wing","category":"Aerodynamics","icon":"wing","nodes":["front-wing"],"offset":[-1.05,0.12,0],"material":"Graphite study finish","description":"The layered front wing and endplates meet the airflow first. Explore the curved elements and their connection beneath the nose."},
+    {"id":"chassis","name":"Nose & chassis","category":"Structure","icon":"chassis","nodes":["chassis"],"offset":[0,0.28,0],"material":"Red study finish","description":"The central body runs from the tapered nose to the cockpit and rear structure. It remains the reference around which the other groups separate."},
+    {"id":"front-left-wheel","name":"Front left wheel","category":"Wheels","icon":"wheel","nodes":["front-left-wheel"],"offset":[-0.1,0.05,1.12],"material":"Dark rubber study finish","description":"The front left tyre and wheel move out together, revealing the suspension and hub behind them. Left and right follow the driver's seating position."},
+    {"id":"front-right-wheel","name":"Front right wheel","category":"Wheels","icon":"wheel","nodes":["front-right-wheel"],"offset":[-0.1,0.05,-1.12],"material":"Dark rubber study finish","description":"The front right tyre and wheel form one separate shell in the original model. Orbit the car to inspect the inner and outer wheel faces."},
+    {"id":"front-suspension","name":"Front suspension","category":"Running gear","icon":"suspension","nodes":["front-suspension"],"offset":[-0.15,0.62,0],"material":"Metallic graphite study finish","description":"Paired suspension links, hub surfaces and nearby wheel hardware connect the front corners to the central body. They lift together as a display group."},
+    {"id":"left-sidepod","name":"Left sidepod","category":"Bodywork","icon":"sidepod","nodes":["left-sidepod"],"offset":[0,0.42,0.88],"material":"Red study finish","description":"The sculpted left flank wraps around the cooling inlet and narrows towards the rear. Its display cut exposes the shape of the outer bodywork."},
+    {"id":"right-sidepod","name":"Right sidepod","category":"Bodywork","icon":"sidepod","nodes":["right-sidepod"],"offset":[0,0.42,-0.88],"material":"Red study finish","description":"The right sidepod mirrors the flowing outer profile on the opposite side. Compare its upper surface, undercut and relationship to the floor."},
+    {"id":"floor","name":"Floor & diffuser","category":"Aerodynamics","icon":"floor","nodes":["floor"],"offset":[0,0,0],"material":"Graphite study finish","description":"The low underbody, floor edges and rear diffuser form the base of the concept. This group stays in place while the bodywork lifts away.","revealOnSelect":true},
+    {"id":"halo","name":"Halo","category":"Cockpit","icon":"halo","nodes":["halo"],"offset":[-0.12,1.55,0],"material":"Red study finish","description":"The curved cockpit protection structure rises above the driver's opening. Its mounting region is divided from the fused source body for this view."},
+    {"id":"engine-cover","name":"Airbox & engine cover","category":"Bodywork","icon":"cover","nodes":["engine-cover"],"offset":[0.3,1.3,0],"material":"Red study finish","description":"The air intake, upper engine cover and fin lift above the central body. These are exterior surfaces; the source does not supply a complete engine underneath."},
+    {"id":"rear-suspension","name":"Rear suspension","category":"Running gear","icon":"suspension","nodes":["rear-suspension"],"offset":[0.28,0.62,0],"material":"Metallic graphite study finish","description":"The rear links and hub surfaces sit between the body and rear wheels. Separation reveals their arrangement around the exhaust and diffuser."},
+    {"id":"rear-left-wheel","name":"Rear left wheel","category":"Wheels","icon":"wheel","nodes":["rear-left-wheel"],"offset":[0.2,0.05,1.12],"material":"Dark rubber study finish","description":"The broad rear left tyre and wheel separate as the intact source shell. Compare its width and wheel face with the front corner."},
+    {"id":"rear-right-wheel","name":"Rear right wheel","category":"Wheels","icon":"wheel","nodes":["rear-right-wheel"],"offset":[0.2,0.05,-1.12],"material":"Dark rubber study finish","description":"The rear right wheel moves outward to expose the inner running gear. Its tyre and wheel geometry remain together throughout disassembly."},
+    {"id":"rear-wing","name":"Rear wing","category":"Aerodynamics","icon":"wing","nodes":["rear-wing"],"offset":[0.95,0.8,0],"material":"Graphite study finish","description":"The high rear wing, endplates and central supports move behind the car. Orbit above it to inspect the layered wing surfaces."},
+    {"id":"mirrors","name":"Mirrors","category":"Cockpit","icon":"sidepod","nodes":["mirrors"],"offset":[-0.4,1.08,0],"material":"Red and graphite study finish","description":"The paired mirror housings and their upper supports lift away from either side of the cockpit. Their geometry comes from the original concept."},
+    {"id":"exhaust","name":"Exhaust outlet","category":"Powertrain exterior","icon":"engine","nodes":["exhaust"],"offset":[1.15,0.15,0],"material":"Metallic graphite study finish","description":"The central exhaust outlet is a separate shell in the source model. It slides rearward to reveal its visible exterior shape."}
+  ]
+}
